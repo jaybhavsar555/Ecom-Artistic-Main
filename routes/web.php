@@ -21,12 +21,14 @@ use App\Http\Controllers\Frontend\FrontendController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
- Route::get("/",[FrontendController::class,'index']);
-//  Route::get("/card",[CardViewController::class,'index']);
+Route::get('category','App\Http\Controllers\Frontend\FrontendController@category');
+Route::get("view-category/{slug}",[FrontendController::class,'viewcategory']);
+Route::get("category/{cate_slug}/{prod_slug}",[FrontendController::class,'viewproduct']);
+Route::get("/",[FrontendController::class,'index']);
+
+
+
 
 Auth::routes();
 

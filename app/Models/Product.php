@@ -28,6 +28,7 @@ class Product extends Model
 
     public function category(){
         return $this->belongsTo(Category::class,'cate_id','id');
+        // join between table product and category where  category.cate_id=product.id
     }
 }
 

@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
     
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
+    
 
     <!-- Scripts -->
     <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
@@ -41,12 +44,6 @@
 
             <div class="content">
                 @yield('content')
-                
-
-        @include('layouts.inc.cardview')   
-
-
-
             </div>
 
             
@@ -58,7 +55,10 @@
     <!-- Scripts -->
     <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
     <!-- <script src="{{asset('frontend\js\bootstrap.bundle.min.js.css')}}" defer></script> -->
-    <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}" defer></script>
+
+    <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}" ></script>
+    <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{asset('frontend/js/owl.carousel.min.js')}}" ></script>
     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @if(session('status')){
@@ -68,5 +68,7 @@
     }
     @endif
     @yield('scripts')
+
+
 </body>
 </html>
