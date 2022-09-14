@@ -14,20 +14,22 @@
    <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- <link href="{{asset('assets/frontend/css/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href="{{asset('assets/frontend/css/nucleo-svg.css')}}" rel="stylesheet" /> -->
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
     <!-- Style -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     
+    
     <link id="pagestyle" href="admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
-    
     <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
     
@@ -59,6 +61,7 @@
     <script src="{{asset('frontend/js/jquery-3.6.1.min.js')}}" ></script>
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}" ></script>
     <script src="{{asset('frontend/js/owl.carousel.min.js')}}" ></script>
+    <script src="{{asset('frontend/js/custom.js')}}" ></script>
     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @if(session('status')){

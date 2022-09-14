@@ -16,7 +16,7 @@
                 <div class="owl-carousel product-carousel owl-theme">
                         @foreach ($featured_products as $prod)
                                         <div class="item">
-                                                <div class="card">
+                                                <div class="card" tyle="border-color:black;">
                                                     
                                                         <div class="row">
                                                                     <img src="{{    asset('assets/uploads/products/'.$prod->image   )}}" alt="Product Image">
