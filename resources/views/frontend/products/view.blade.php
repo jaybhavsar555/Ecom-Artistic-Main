@@ -51,6 +51,7 @@
                     
                     @if($product->qty>0)
                     <label  class="badge bg-success">In Stock</label>
+                    
                     @else
                     <label class="badge bg-danger">Out of Stock</label>
                     @endif
@@ -59,16 +60,27 @@
                             <input type="hidden" class="prod_id" value="{{$product->id}}">
                             <label for="Quantity">Quantity</label>
                             <div class="input-group text-center mb-3  ms-2" style="width:100px;"> <br>
-                                    <button class="input-group-text decrement-btn" >-</button>
+                                    <button class=" decrement-btn" >-</button>
                                     <input type="text"  name="quantity" value="1" class="form-control text-center qty-input">
-                                    <button class="input-group-text increment-btn"> + </button>
+                                    <button class="increment-btn"> + </button>
                             </div>
+                        @if($product->qty>0)
+                                <h7>Current Availabilty:</h7>
+                                <h7>{{$product->qty}}</h7>
+                         @endif
                         </div>
+
                     
 
                     <div class="col-md-9">
                         <br/>
+
+                        @if($product->qty>0)
+                        
                         <button type="button" class="btn btn-primary me-3 addToCartBtn float-start">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                       
+                        @endif
+                        
                         <button type="button" class="btn btn-success me-3 float-start">Add to Wishlist <i class="fa fa-heart"></i></button>
                     </div>
                 </div>

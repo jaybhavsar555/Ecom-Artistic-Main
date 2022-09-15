@@ -38,6 +38,7 @@
                     </div>
                     <div class="col-md-3 my-auto">
                     <input type="hidden" class="prod_id" value="{{$item->prod_id}}">
+                    @if($item->products->qty >= $item->prod_qty)
                                 <label for="Quantity">Quantity</label>
                                 <div class="input-group mb-3" style="width:100px; ">
                                 <button class=" changeQuantity decrement-btn" style="padding:10%;"> - </button>
@@ -45,17 +46,21 @@
                                         <button class=" text-center changeQuantity increment-btn"> + </button>
                                         
                                 </div>
+                                <?php $total +=$item->products->selling_price*$item->prod_qty; ?>
+                    @else
+                    <h6>Out of Stock</h6>
+                    @endif
                     </div>
                     <div class="col-md-2 my-auto">
                         <button type="button" class="btn btn-danger deleteCartItem "> <i class="fa fa-trash"></i> Remove</button>
                     </div> 
             </div>
             <br>
-            <?php $total +=$item->products->selling_price*$item->prod_qty; ?>
+            
             @endforeach
         </div>
         <div class="card-footer">
-            <h6>Total Price :Rs{{$total}}
+            <h6>Total Price :Rs {{$total}}
 
             <a  href="{{url('checkout')}}"class="btn btn-outline-success float-end">Procced to Checkout</a>
             </h6>
