@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header"> 
         <h1>Products</h1>
-        <hr>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
         </div>
         <div class="card-body">
         <table class="table table-bordered table-striped">

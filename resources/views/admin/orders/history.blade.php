@@ -13,6 +13,7 @@
                         <h4>Orders History</h4>
                         <a href="{{'orders'}}" class="btn btn-warning float-end"> New Order</a>
                         </div>
+                        <hr style="border-width:0;color:gray;background-color:gray">
                         <div class="card-body">
                         <table class="table table-striped">
                     <thead>
