@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('state');
             $table->string('country');
             $table->string('pincode');
+            $table->string('total_price');
             $table->tinyInteger('status')->default('0');    //0-placed order 1-shift 2-deliver as per admin upadate
             $table->string('message')->nullable();  
             $table->string('tracking_no');  //any random number

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Product;
 
 class OrderItem extends Model
 {
@@ -13,7 +14,12 @@ class OrderItem extends Model
     protected $fillable=[
         'order_id',
         'prod_id',
-        'qty',
+        'qty',  
         'price',
     ];
+
+    public function products()
+    {
+        return $this->belongsTo(Product::class,'prod_id','id');
+    }
 }
