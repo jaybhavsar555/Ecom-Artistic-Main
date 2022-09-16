@@ -16,6 +16,7 @@
                 <table class="table table-striped">
                 <thead>
                     <tr>
+                        
                         <th>Order Date:</th>
                         <th>Tracking Number</th>
                         <th>Total Price:</th>
@@ -26,6 +27,7 @@
                 <tbody>
                 @foreach($orders as $item)
                     <tr>
+                            
                             <td>{{date('d-m-y',strtotime($item->created_at))}}</td>
                             <td>{{$item->tracking_no}}</td>
                             <td>Rs. {{$item->total_price}}</td>

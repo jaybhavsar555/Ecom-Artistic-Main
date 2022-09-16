@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
-    public function index()
+    public function index() //to delete cart product if exceeds the quantity as per stored in database
     {
         $old_cartitems=Cart::where('user_id',Auth::id())->get();
         foreach($old_cartitems as $item){
@@ -27,6 +27,13 @@ class CheckoutController extends Controller
         return view('frontend.checkout',compact('cartitems'));
     }
 
+
+    /*
+        to add details of checkout form and update too
+        and show order details of cart added products and
+        and to place products to order
+    
+    */
     public function placeorder(Request $request){
 
         $order=new Order();
@@ -48,7 +55,7 @@ class CheckoutController extends Controller
         $total=0;
         $cartitems_total=Cart::where('user_id',Auth::id())->get();
         foreach($cartitems_total as $prod){
-            $total += $prod->products->selling_price;
+            $total += $prod->products->selling_price * $prod->prod_qty;
         }
 
         $order->total_price=$total;
@@ -80,7 +87,7 @@ class CheckoutController extends Controller
         if(Auth::user()->address1 == NULL || Auth::user()->address2 == NULL )
         {
             $user=User::where('id',Auth::id())->first();
-            $user->fname=$request->input('fname');
+            $user->name=$request->input('fname');
             $user->lname=$request->input('lname');
             $user->phone=$request->input('phone');
             $user->address1=$request->input('address1');
