@@ -37,6 +37,8 @@ Route::get("/",[FrontendController::class,'index']);
 
 Auth::routes();
 
+Route::get('load-cart-data',[CartController::class,'cartcount']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
