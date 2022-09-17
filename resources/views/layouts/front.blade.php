@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- searchbar jquery -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
     <!-- Style -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -62,8 +64,31 @@
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}" ></script>
     <script src="{{asset('frontend/js/owl.carousel.min.js')}}" ></script>
     <script src="{{asset('frontend/js/custom.js')}}" ></script>
+   
     
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+  
+    var availableTags = [];
+    $.ajax({
+            method: "GET",
+            url: "/product-list",
+            success: function(response) {
+                // console.log(response);
+                startAutoComplete(response);
+            } 
+    
+        });
 
+        function startAutoComplete(availableTags) 
+        {
+            $( "#search_product" ).autocomplete({
+                    source: availableTags
+             });
+        }
+   
+ 
+  </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('scripts')
     @if(session('status')){

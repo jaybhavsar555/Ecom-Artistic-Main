@@ -34,6 +34,8 @@ Route::get("/",[FrontendController::class,'index']);
 
 
 
+Route::get("product-list",[FrontendController::class,'productlistAjax']);
+Route::post("searchproduct",[FrontendController::class,'searchProduct']);
 
 Auth::routes();
 

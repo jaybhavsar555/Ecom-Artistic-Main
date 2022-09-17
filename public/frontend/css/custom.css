@@ -29,3 +29,26 @@
     padding: 5px  !important;
 
 }
+
+.search-bar{
+
+        width: 55%;
+        padding: auto;
+        margin-left: 10px;
+
+}
+
+.navbar-brand{
+    margin-left: 4px;
+}
+
+.ui-menu{
+    z-index: 4000 !important;
+    
+}
+
+.sbtn{
+    border: 0px;
+    background-color: wheat;
+    
+}

@@ -16,14 +16,26 @@
 </style>
 <body>  
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-radius-xl">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow  bg-light border-radius-xl">
   <div class="container-fluid">
     <a class="navbar-brand"  href="{{url('/')}}">Artistic Ecommerce</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="search-bar ">
+      <form action="{{url('searchproduct')}}" method="POST">
+        @csrf
+        <div class="input-group">
+        
+        <input type="search" class="form-control"  name="search_name_product" id="search_product" placeholder="Search Product Here..." required  aria-label="Search Product Here..." >
+        
+        <button  type="submit" class="sbtn" > <i class="fa fa-search"></i></button>
+        
+      
+      </div>
+      </form>
+    </div>
+    
+  
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0 me-2">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page"  href="{{url('/')}}" >Home</a>
         </li>
@@ -41,10 +53,10 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
-        </li>
-       
+        </li> 
       </ul>
       
+     
       @guest 
         @if(Route::has('login'))
         

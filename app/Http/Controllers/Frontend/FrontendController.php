@@ -39,25 +39,62 @@ class FrontendController extends Controller
 
     }
 
-    public function viewproduct($cate_slug,$prod_slug){
+    public function viewproduct($cate_slug,$prod_slug)
+    {
 
- if(Category::where('slug',$cate_slug)->exists())
-        {
-            if(Product::where('slug',$prod_slug)->exists())
-            {
-                    $product=Product::where('slug',$prod_slug)->first();
-                   
-                    return view('frontend.products.view',compact('product'));
-            }
-            else{
+        if(Category::where('slug',$cate_slug)->exists())
+                {
+                    if(Product::where('slug',$prod_slug)->exists())
+                    {
+                            $product=Product::where('slug',$prod_slug)->first();
+                        
+                            return view('frontend.products.view',compact('product'));
+                    }
+                    else{
 
-                return redirect('/')->with('status','The link is broken!!');
+                        return redirect('/')->with('status','The link is broken!!');
+                    }
+                }
+                else{
+                    return redirect('/')->with('status','No such Category Found!');
+                }
+
             }
+
+
+    public function productlistAjax()
+    {
+        $products=Product::select('name')->where('status','0')->get();
+        $data=[];
+
+        foreach ($products as $item) {
+            $data[]=$item['name'];
+            
+        }
+        return $data;
+    } 
+
+    public function searchProduct(Request $request)
+    {
+        $search_product=$request->input('search_name_product');
+        
+        if($search_product!=""){
+                $product=Product::where("name","LIKE","%$search_product%")->first();
+               
+                if($product){
+
+                    return redirect('category/'.$product->category->slug.'/'.$product->slug);
+                }
+                else{
+
+                    return redirect()->back()->with("status","No Products matched your search");
+                }
         }
         else{
-            return redirect('/')->with('status','No such Category Found!');
+            return redirect()->back();
         }
-
     }
+
 }
+
 
