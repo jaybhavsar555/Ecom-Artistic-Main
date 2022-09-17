@@ -28,10 +28,8 @@ class LoginController extends Controller
      * Where to redirect users after login.
      *
      * @var string
-    
      */
     // protected $redirectTo = RouteServiceProvider::HOME;
-    //Second method to Redirect with Message ("STATUS") eg: welcome to dashboard
     protected function authenticated()
     {
         if(Auth::user()->role_as == '1') //1 = Admin Login
@@ -43,13 +41,15 @@ class LoginController extends Controller
             return redirect('/')->with('status','Logged in successfully');
         }
     }
-    
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+    
+    
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

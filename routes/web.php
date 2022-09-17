@@ -37,9 +37,11 @@ Route::get("/",[FrontendController::class,'index']);
 
 Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('load-cart-data',[CartController::class,'cartcount']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 
@@ -90,3 +92,5 @@ Route::middleware(['auth','isAdmin'])->group(function() {
     Route::get('view-user/{id}',[DashboardController::class,'viewuser']);
 
  });
+
+
