@@ -1,6 +1,6 @@
 *{
     font-family: "Roboto",sans-serif;
-
+    scroll-behavior:initial;
 }
 
 .checkout-form label{
@@ -51,4 +51,10 @@
     border: 0px;
     background-color: wheat;
     
+}
+
+.whats-app-chat{
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
 }

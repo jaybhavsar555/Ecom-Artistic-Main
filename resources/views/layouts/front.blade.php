@@ -51,7 +51,11 @@
             </div>
 
             
-
+        <div class="whats-app-chat">
+            <a href="https://wa.me/123456789?text=I'm%20inquiring%20about%20the%20jewellerey" target="_blank">
+                <img src="{{asset('assets/images/whatsapp.png')}}" alt="" height="50px" width="50px">
+            </a>
+        </div>
     
     
     
