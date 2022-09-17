@@ -86,17 +86,17 @@ class CheckoutController extends Controller
 
         if(Auth::user()->address1 == NULL || Auth::user()->address2 == NULL )
         {
-            $user=User::where('id',Auth::id())->first();
-            $user->name=$request->input('fname');
-            $user->lname=$request->input('lname');
-            $user->phone=$request->input('phone');
-            $user->address1=$request->input('address1');
-            $user->address2=$request->input('address2');
-            $user->city=$request->input('city');
-            $user->state=$request->input('state');
-            $user->country=$request->input('country');
-            $user->pincode=$request->input('pincode');
-            $user->update();
+            $order=Order::where('user_id',Auth::id())->first();
+            $order->fname=$request->input('fname');
+            $order->lname=$request->input('lname');
+            $order->phone=$request->input('phone');
+            $order->address1=$request->input('address1');
+            $order->address2=$request->input('address2');
+            $order->city=$request->input('city');
+            $order->state=$request->input('state');
+            $order->country=$request->input('country');
+            $order->pincode=$request->input('pincode');
+            $order->update();
         }
 
         $cartitems=Cart::where('user_id',Auth::id())->get();

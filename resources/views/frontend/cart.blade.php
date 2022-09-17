@@ -21,7 +21,7 @@
 </div>
 
 <div class="container my-5">
-    <div class="card shadow">
+    <div class="card shadow cartitems">
     @if($cartItems-> count() > 0)
         <div class="card-body">
             <?php $total=0; ?>
@@ -53,7 +53,7 @@
                     @endif
                     </div>
                     <div class="col-md-2 my-auto">
-                        <button type="button" class="btn btn-danger deleteCartItem "> <i class="fa fa-trash"></i> Remove</button>
+                        <button type="button" class="btn btn-danger delete-cart-item "> <i class="fa fa-trash"></i> Remove</button>
                     </div> 
             </div>
             <br>
