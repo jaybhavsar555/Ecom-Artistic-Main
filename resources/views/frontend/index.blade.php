@@ -9,17 +9,26 @@
    
     
 
-<div class="py-5">
+
+<div class="img_here">
+                <img src="{{asset('assets/images/im1.jpg')}}" alt="Images here">
+            </div>  
+
+
+<br>
+
+<div class="py-5 popular_prod">
         <div class="container border-1">
             <div class="row">
-                <h2>Products</h2>
+                <h2>Popular Products</h2>
                 <div class="owl-carousel product-carousel owl-theme">
-                        @foreach ($featured_products as $prod)
+                        @foreach ($popular_products as $prod)
                                         <div class="item">
                                                 <div class="card" tyle="border-color:black;">
                                                     
                                                         <div class="row">
                                                                     <img src="{{    asset('assets/uploads/products/'.$prod->image   )}}" alt="Product Image">
+                                                                    
                                                                     <div class="card-body">
                                                                         <h5>{{$prod->name}}</h5>
                                                                         <p>{{$prod->description}}</p>
@@ -37,8 +46,34 @@
         </div>
 </div>
 <br>
-<br>
-<div class="py-5">
+
+<!-- services we provide -->
+<h3>Our Services:</h3>
+<div class="service_container">
+               
+                             
+                    <div  class="align"id="s1">
+                        <h5>Super fast Delivery</h5>
+                        <p></p>
+                    </div>
+                    <div  class="align"id="s2">
+                        <h5>Super fast Delivery</h5>
+                        <p></p>
+                    </div>
+                    <div  class="align"id="s3">
+                        <h5>Super fast Delivery</h5>
+                            <p></p>
+                        </div>
+                    <div  class="align" id="s4">
+                    <h5>Super fast Delivery</h5>
+                        <p></p>
+                    </div>
+            </div>
+
+  
+
+
+<div class="py-5 cate">
         <div class="container border-1">
             <div class="row">
                 <h2>Popular Categories</h2>

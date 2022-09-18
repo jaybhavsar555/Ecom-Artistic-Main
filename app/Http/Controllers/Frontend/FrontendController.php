@@ -12,9 +12,9 @@ class FrontendController extends Controller
     
     public function index()
     {
-        $featured_products= Product::where('status','0')->take(15)->get(); //to show all the products with status as 0
+        $popular_products= Product::where('popular','0')->take(10)->get(); //to show all the products with popular as 0
         $popular_category= Category::where('popular','0')->take(15)->get(); // to show popular categories
-         return view('frontend.index',compact('featured_products','popular_category'));
+         return view('frontend.index',compact('popular_products','popular_category'));
     }
     public function category()
     {

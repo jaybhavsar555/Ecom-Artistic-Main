@@ -18,11 +18,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow  bg-light border-radius-xl">
   <div class="container-fluid">
-    <a class="navbar-brand"  href="{{url('/')}}">Artistic Ecommerce</a>
+    <a class="navbar-brand"  href="{{url('/')}}"><img src="{{asset('assets/images/logo.png')}}" alt="logo here" height="50px" width="50px"></a>
     <div class="search-bar ">
       <form action="{{url('searchproduct')}}" method="POST">
         @csrf
-        <div class="input-group">
+        <div class="input-group ms-auto">
         
         <input type="search" class="form-control"  name="search_name_product" id="search_product" placeholder="Search Product Here..." required  aria-label="Search Product Here..." >
         

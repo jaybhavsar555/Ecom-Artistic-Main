@@ -61,6 +61,10 @@
                         <label for="">Status</label>
                         <input type="checkbox" name="status" {{ $products->status == '1' ? 'checked':''}} >
                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="">popular</label>
+                        <input type="checkbox" name="popular" {{ $products->popular == '1' ? 'checked':''}} >
+                    </div>
 
                     <div class="col-md-12 mb-3">
                         <label for="">Meta Title </label>

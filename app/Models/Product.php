@@ -21,6 +21,7 @@ class Product extends Model
         'qty',
         'tax',
         'status',
+        'popular',
         'meta_title',
         'meta_keywords',
         'meta_description',
