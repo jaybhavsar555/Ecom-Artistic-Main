@@ -11,26 +11,18 @@
             <thead>
                 <tr>
                     <th>id</th>
+                    <th>Roll</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                   
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($users as $item)
                 <tr>
                     <td>{{$item->id}}</td>
+                    <td>{{$item->role_as =='0'? 'User':'Admin'}}</td>
                     <td>{{$item->name.' '.$item->lname}}</td>
                     <td>{{$item->email}}</td>
-                    <td>{{$item->phone}}</td>
-                    
-                    <td>
-                        <a href="{{url('view-user/'.$item->id)}}" class='btn btn-primary'>view</a>
-                        <!-- <a  href="{{url('delete-product/'.$item->id)}}"class='btn btn-danger'>Delete</a> -->
-
-                    </td>
                 </tr>
                 @endforeach
             </tbody>

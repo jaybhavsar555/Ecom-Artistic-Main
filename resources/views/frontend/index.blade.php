@@ -5,16 +5,9 @@
 @endsection
 
 @section('content')
-    
-   
-    
 
 
-<div class="img_here">
-                <img src="{{asset('assets/images/im1.jpg')}}" alt="Images here">
-            </div>  
-
-
+@include('layouts.inc.slider') 
 <br>
 
 <div class="py-5 popular_prod">
@@ -48,27 +41,36 @@
 <br>
 
 <!-- services we provide -->
-<h3>Our Services:</h3>
-<div class="service_container">
-               
-                             
-                    <div  class="align"id="s1">
-                        <h5>Super fast Delivery</h5>
-                        <p></p>
+
+<h3>Our Services:</h3>  
+<div class="service_container">         
+                    
+                    <div  class="card align"id="s1" style="border:2px solid black;">
+                        <h5>Customized Items</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia nulla harum? Accusantium nemo, doloribus blanditiis maiores vero illo ipsum libero. Maiores eligendi nostrum nobis! Lorem ipsum dolor sit amet.
+
+                        </p>
                     </div>
-                    <div  class="align"id="s2">
-                        <h5>Super fast Delivery</h5>
-                        <p></p>
+                    <div  class="card align"id="s2" style="border:2px solid black;">
+                        <h5>Firing and Drying Available</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia nulla harum? Accusantium nemo, doloribus blanditiis maiores vero illo ipsum libero. Maiores eligendi nostrum nobis! Lorem ipsum dolor sit amet.
+
+                        </p>
                     </div>
-                    <div  class="align"id="s3">
-                        <h5>Super fast Delivery</h5>
-                            <p></p>
+                    <div  class="card align"id="s3"style="border:2px solid black;">
+                        <h5>Super Fast Delivery</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia nulla harum? Accusantium nemo, doloribus blanditiis maiores vero illo ipsum libero. Maiores eligendi nostrum nobis! Lorem ipsum dolor sit amet.
+
+</p>
                         </div>
-                    <div  class="align" id="s4">
-                    <h5>Super fast Delivery</h5>
-                        <p></p>
+                    <div  class="card align" id="s4"style="border:2px solid black;">
+                    <h5>4-Days Return Policy</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia nulla harum? Accusantium nemo, doloribus blanditiis maiores vero illo ipsum libero. Maiores eligendi nostrum nobis! Lorem ipsum dolor sit amet.
+
+</p>
                     </div>
             </div>
+            
 
   
 

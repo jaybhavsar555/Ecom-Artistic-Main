@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container py-5">
+<div class="container py-5" >
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -13,7 +13,7 @@
                     <h4 class="text-white">Order View</h4>
                     <a href="{{url('my-orders')}}" class="btn btn-warning text-white float-end">back</a>
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="p">
                     <div class="row">
                         <div class="col-md-6 order-details">
                                 <label for="">First Name:</label>
@@ -61,15 +61,34 @@
                 </tbody>
                 </table>
                 <h4>Grand total: Rs. {{$orders->total_price}}</h4>
-                        </div>
+                <br>
+                      
+            
+            </div>
+             
                     </div>
                 
                 </div>
+                <div class="col-md-2 my-auto">
+                        <button type="button"  onclick="printOrder(this)" class="btn btn-danger"> Print Order</button>
+
+                        <script>
+                            function printOrder() {
+                                var divContents = document.getElementById("p").innerHTML;
+                                var a = window.open('', '', 'height=1000, width=1000');
+                                a.document.write('<html>');
+                                a.document.write('<body > <h1>Order Details: <br>');
+                                a.document.write(divContents);
+                                a.document.write('</body></html>');
+                                a.document.close();
+                                a.print();
+                            }
+                        </script>
+                    </div> 
             </div>
 
             
         </div>
     </div>
 </div>
-
 @endsection

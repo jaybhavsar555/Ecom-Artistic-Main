@@ -7,21 +7,12 @@
 
 @section('content')
 
-<div class="py-3 mb-4 shadow-sm bg-warning border-top">
+<div class="py-3 b-4 shadow-sm bg-warning border-top">
     <div class="container">
-        <h6 class="mb-0">
-                <a href="{{url('category')}}">
-                Collections   
-                </a>/
-                <a href="{{ url('category/'.$product->category->slug) }}">
-                {{$product->category->name}}
-                </a>/
-                <a href="{{url('category/'.$product->category->slug.'/'.$product->slug)}}">
-                    {{$product->name}}
-                </a>
-            </h6>
-        </div>
+    <h6 class="mb-0">Category/{{$product->category->name}}/{{$product->name}}</h6>
+    </div>
 </div>
+
 <br>
 
 
@@ -81,7 +72,7 @@
                        
                         @endif
                         
-                        <button type="button" class="btn btn-success me-3 float-start">Add to Wishlist <i class="fa fa-heart"></i></button>
+                        <!-- <button type="button" class="btn btn-success me-3 float-start">Add to Wishlist <i class="fa fa-heart"></i></button> -->
                     </div>
                 </div>
             </div>

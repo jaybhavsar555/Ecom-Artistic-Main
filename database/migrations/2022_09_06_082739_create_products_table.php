@@ -25,8 +25,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('qty');
             $table->string('tax');
-            $table->tinyInteger('status');
-            $table->tinyInteger('popular');
+            $table->tinyInteger('status')->default('0');
+            $table->tinyInteger('popular')->default('0');
             $table->mediumText('meta_title');
             $table->mediumText('meta_keywords');
             $table->mediumText('meta_description');

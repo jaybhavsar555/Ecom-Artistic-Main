@@ -16,11 +16,11 @@
         <div class="row">
             <div class="col-md-4 mt-3">
             <label for="">Role</label>
-                <div class="p-2 border">{{$users->role_as =='0'? 'user':'Admin'}}</div>
+                <div class="p-2 border">{{$users->role_as =='0'? 'Admin':'ser'}}</div>
             </div>
             <div class="col-md-4 mt-3">
             <label for="">First Name</label>
-                <div class="p-2 border">{{$users->name}}</div>
+                <div class="p-2 border">{{$users->fname}}</div>
             </div>
             <div class="col-md-4 mt-3">
             <label for="">Last Name</label>

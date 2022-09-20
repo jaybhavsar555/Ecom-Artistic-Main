@@ -33,8 +33,7 @@ Route::get("category/{cate_slug}/{prod_slug}",[FrontendController::class,'viewpr
 Route::get("/",[FrontendController::class,'index']);
 
 
-
-
+Route::view('contactus', 'layouts.Contactus');
 Route::get("product-list",[FrontendController::class,'productlistAjax']);
 Route::post("searchproduct",[FrontendController::class,'searchProduct']);
 

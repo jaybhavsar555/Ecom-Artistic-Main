@@ -7,14 +7,14 @@
 @section('content')
 <div class="py-3 b-4 shadow-sm bg-warning border-top">
     <div class="container">
-    <h6 class="mb-0">Collections/{{$category->name}}</h6>
+    <h6 class="mb-0">Category/{{$category->name}}</h6>
     </div>
 </div>
 
 <div class="py-5">
         <div class="container border-1">
             <div class="row">
-                <h2>{{$category->name}}</h2>
+                <h2 >{{$category->name}}</h2>
                 
                     @foreach ($products as $prod)
                     <div class="col-md-3 mb-3">
