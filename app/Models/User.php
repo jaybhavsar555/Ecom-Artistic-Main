@@ -10,11 +10,11 @@ use Laravel\Sanctum\HasApiTokens;
 use Laratrust\Traits\LaratrustUserTrait;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Authenticatable implements  CanResetPasswordContract
+class User extends Authenticatable 
 {
     use LaratrustUserTrait;
     use HasApiTokens, HasFactory, Notifiable;
-    use Notifiable, CanResetPassword;
+    // use Notifiable, CanResetPassword;
 
     /**
      * The attributes that are mass assignable.
