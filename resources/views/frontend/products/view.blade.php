@@ -56,8 +56,8 @@
                                     <button class="increment-btn"> + </button>
                             </div>
                         @if($product->qty>0)
-                                <h7>Current Availabilty:</h7>
-                                <h7>{{$product->qty}}</h7>
+                                <h6>Current Availabilty:</h6>
+                                <h6>{{$product->qty}}</h6>
                          @endif
                         </div>
 
