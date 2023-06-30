@@ -53,7 +53,7 @@ Route::post('update-cart',[CartController::class,'updatecart']);
 Route::post('delete-cart-item',[CartController::class,'deleteProduct']);
 
 
-
+//for user
 Route::middleware(['auth'])->group(function() {
     
     Route::get('cart',[CartController::class,'viewcart']);
@@ -62,6 +62,8 @@ Route::middleware(['auth'])->group(function() {
     Route::get('my-orders',[UserController::class,'index']);
     Route::get('view-order/{id}',[UserController::class,'view']);
 });
+
+//for admin
 Route::middleware(['auth','isAdmin'])->group(function() {
 
     Route::get('/dashboard','App\Http\Controllers\Admin\FrontendController@index');

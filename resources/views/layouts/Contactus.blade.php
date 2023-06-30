@@ -91,7 +91,7 @@ label {
                         <div class="form-group">
                             <label for="form_lastname">Lastname *</label>
                             <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                                                            </div>
+                    </div>
                     </div>
                 </div>
                 <div class="row">
@@ -129,8 +129,7 @@ label {
 
                     <div class="col-md-12">
                         
-                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
-                            " value="Send Message" >
+                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Send Message" >
                     
                 </div>
           
